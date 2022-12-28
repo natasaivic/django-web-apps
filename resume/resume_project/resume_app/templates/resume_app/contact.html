@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Natasa Ivic" />
+    <meta name="description" content="This is a resume demo." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    {% load static %}
+    <link href="{% static "resume_app/css/bootstrap.min.css" %}" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static "resume_app/css/cover.css" %}" rel="stylesheet">
+
+  </head>
+  <body class="d-flex h-100 text-center text-bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0" style="font-size: 50px; font-family:fantasy ;">NI</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0" href="/">Home</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/experience/">Experience</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/qa/">QA</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/subscribe_form/">Subscribe</a>
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <ion-icon name="mail-open-outline"></ion-icon>
+    <p>ivicsnatasa@gmail.com</p>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <a href="https://github.com/natasaivic" target="_blank"><ion-icon name="logo-github" size="large"></ion-icon></a>
+    <a href="https://www.linkedin.com/in/natasaivic/" target="_blank"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+    <p>&copy; 2022 Nataša Ivić</p>
+  </footer>
+</div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
+</body>
+</html>
