@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Natasa Ivic">
+    <title>Microblog</title>
+    
+    <link href="{% static 'microblog_app/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'microblog_app/css/style.css' %}" rel="stylesheet">
+     
+    <!-- Custom styles for this template -->
+    <link href="{% static 'microblog_app/css/blog.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    
+<header class="site-header sticky-top py-1">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="#" aria-label="Home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    </a>
+    
+    <a class="py-2 d-none d-md-inline-block" href="/">Home</a>
+    <a class="py-2 d-none d-md-inline-block" href="/post/">New post</a>
+    <a class="py-2 d-none d-md-inline-block" href="/">Subscribe</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Contact</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">About me</a>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a class="link-secondary" href="#" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+      </a>
+      <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<div class="position-relative overflow-hidden p-4 p-md-5 m-md-3 text-center background">
+  <form action="/post_form/" method="post">
+    {% csrf_token %}
+    <label for="title">Title: </label>
+    <input id="title" type="text" name="title" maxlength="200" required value="{{ form.title.value|default:'' }}">
+    <br>
+    <label for="tekst">Text: </label>
+    <input id="tekst" type="text" name="text" maxlength="3000" required value="{{ form.text.value|default:'' }}">
+    <br>
+    <input type="submit" value="OK">
+  </form>
+
+</div>  
+
+</main>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+      <small class="d-block mb-3 text-muted">&copy; 2022-2023</small>
+    </div>
+
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Resource name</a></li>
+        <li><a class="link-secondary" href="#">Resource</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Business</a></li>
+        <li><a class="link-secondary" href="#">Education</a></li>
+       
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Team</a></li>
+        <li><a class="link-secondary" href="#">Locations</a></li>
+        <li><a class="link-secondary" href="#">Privacy</a></li>
+        <li><a class="link-secondary" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="{% static 'microblog_app/js/bootstrap.bundle.min.js' %}"></script> 
+  </body>
+</html>
